@@ -15,6 +15,7 @@ const players = [
   { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/basic.jpg" },
   { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg" },
   { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/basic.jpg" },
+  { name: "xBurgo", tag: "BURGO", imageUrl: "/images/basic.jpg" },
 ];
 
 const ligaOrden = [
@@ -59,7 +60,7 @@ function compararRank(a: Player, b: Player) {
   return 0;
 }
 
-const REFRESH_TIME = 5 * 60 * 1000;
+const REFRESH_TIME = 0; //5 * 60 * 1000;
 
 const fetchRank = async (summonerName: string, tag: string) => {
   const res = await fetch(
@@ -164,7 +165,8 @@ export default function Home() {
 
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} style={{ margin: 0 }}>  
+      <body style={{ margin: 0 }}>
       <h1 className={styles.title}>SOLOQ CHALLENGE</h1>
 
       <div className={styles.controls}>
@@ -229,6 +231,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
+      </body>
     </main>
   );
 }

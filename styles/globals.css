@@ -1,14 +1,13 @@
+/* styles/globals.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-
-/* Estilos globales opcionales */
-html, body {
-  height: 100%;
+body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: transparent;
-}
-
-* {
-  box-sizing: border-box;
+  background: linear-gradient(to bottom, #1e1e1e, #1b1b1b);
 }
