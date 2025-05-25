@@ -15,7 +15,7 @@ const players = [
   { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/basic.jpg" },
   { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg" },
   { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/basic.jpg" },
-  { name: "xBurgo", tag: "BURGO", imageUrl: "/images/basic.jpg" },
+  { name: "xBurgo", tag: "BURGO", imageUrl: "/images/biengo.jpg" },
 ];
 
 const ligaOrden = [
@@ -60,7 +60,7 @@ function compararRank(a: Player, b: Player) {
   return 0;
 }
 
-const REFRESH_TIME = 0; //5 * 60 * 1000;
+const REFRESH_TIME = 2.5 * 60 * 1000;
 
 const fetchRank = async (summonerName: string, tag: string) => {
   const res = await fetch(
@@ -124,7 +124,7 @@ export default function Home() {
 
   const canRefresh = !lastUpdate || Date.now() - lastUpdate > REFRESH_TIME;
 
-  const [sortBy, setSortBy] = useState<"pos" | "name" | "rank" | "partidas">("pos");
+  const [sortBy, setSortBy] = useState<"pos" | "name" | "rank" | "partidas" | "wr">("pos");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
 
   const getSortedData = () => {
@@ -149,7 +149,7 @@ export default function Home() {
     return sorted;
   };
 
-  const handleSort = (col: "pos" | "name" | "rank" | "partidas") => {
+  const handleSort = (col: "pos" | "name" | "rank" | "partidas" | "wr") => {
     if (sortBy === col) {
       setSortDir(sortDir === "asc" ? "desc" : "asc");
     } else {
@@ -170,13 +170,10 @@ export default function Home() {
       <h1 className={styles.title}>SOLOQ CHALLENGE</h1>
 
       <div className={styles.controls}>
-        <button
-          className={`${styles.refreshButton} ${
-            !canRefresh ? styles.disabled : ""
-          }`}
-          onClick={loadData}
-          disabled={!canRefresh}
-        >
+       <button
+        className={`${!canRefresh ? styles.refreshButtonMal : styles.refreshButton}`}
+        onClick={loadData}
+        disabled={!canRefresh}>
           Refrescar
         </button>
         <p className={styles.lastUpdate}>Última actualización {timeSince}</p>
@@ -202,6 +199,10 @@ export default function Home() {
                 partidas
                 {sortBy === "partidas" && (sortDir === "asc" ? " ▲" : " ▼")}
               </th>
+                <th onClick={() => handleSort("wr")}>
+                    winrate
+                {sortBy === "wr" && (sortDir === "asc" ? " ▲" : " ▼")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -225,6 +226,9 @@ export default function Home() {
                 <td>{player.rank}</td>
                 <td>
                   V: {player.wins} D: {player.losses}
+                </td>
+                <td>
+                  {((player.wins)/(player.wins+player.losses)*100).toFixed(1)}%
                 </td>
               </tr>
             ))}

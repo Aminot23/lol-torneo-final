@@ -34,6 +34,18 @@
   transition: opacity 0.3s ease;
 }
 
+.refreshButtonMal {
+  padding: 0.5rem 1rem;
+  background-color: #5b0000;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  cursor: not-allowed;
+}
+
 .disabled {
   opacity: 0.5;
   cursor: not-allowed;
