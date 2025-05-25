@@ -7,7 +7,7 @@ const players = [
   { name: "PEUGEOT 206", tag: "2003", imageUrl: "/images/amine.jpg" },
   { name: "MiriiCs", tag: "EUW", imageUrl: "/images/basic.jpg" },
   { name: "Blacknalla", tag: "EUW", imageUrl: "/images/basic.jpg" },
-  { name: "Reze", tag: "SLN", imageUrl: "/images/basic.jpg" },
+  { name: "Reze", tag: "SLN", imageUrl: "/images/selene.jpg" },
   { name: "matajare21", tag: "9781", imageUrl: "/images/basic.jpg" },
   { name: "NONTRENO", tag: "973", imageUrl: "/images/basic.jpg" },
   { name: "Ayiyiyiyi", tag: "Yiyi", imageUrl: "/images/basic.jpg" },
@@ -157,6 +157,12 @@ export default function Home() {
     }
   };
 
+  const abrirOpGG = (link: string) => {
+    const url = `https://op.gg/es/lol/summoners/euw/${link}`;
+    window.open(url, '_blank');
+  };
+
+
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>SOLOQ CHALLENGE</h1>
@@ -200,7 +206,11 @@ export default function Home() {
             {getSortedData().map((player, idx) => (
               <tr key={idx}>
                 <td>{idx + 1}</td>
-                <td className={styles.playerCell}>
+                  <td
+                    onClick={() => abrirOpGG(player.name + "-" + player.tag)}
+                    className={styles.playerCell}
+                    style={{ cursor: 'pointer' }}>
+
                   <Image
                     src={player.imageUrl}
                     alt={player.name}
