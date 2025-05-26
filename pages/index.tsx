@@ -19,6 +19,7 @@ const players = [
   { name: "Gol D Loren", tag: "2330", imageUrl: "/images/loren.jpg" },
 ];
 
+
 const ligaOrden = [
   "DIAMOND",
   "EMERALD",
@@ -77,30 +78,41 @@ export default function Home() {
   const [lastUpdate, setLastUpdate] = useState<number | null>(null);
   const [timeSince, setTimeSince] = useState("Desconocido");
   const [maxPartidas, setMaxPartidas] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const loadData = async () => {
-    const results = await Promise.all(
-      players.map(async (player) => {
-        const data = await fetchRank(player.name, player.tag);
-        return {
-          ...player,
-          rank: `${data.tier} ${data.rank} - ${data.lp} LP`,
-          wins: data.wins,
-          losses: data.losses,
-        };
-      })
-    );
+  setLoading(true); // mostrar throbber
 
-    results.sort(compararRank);
+  const results: Player[] = [];
 
-    const max = Math.max(...results.map(p => (p.wins ?? 0) + (p.losses ?? 0)));
-    setMaxPartidas(max); // Asegúrate de tener esto en tu useState
+  for (let i = 0; i < players.length; i++) {
+    const player = players[i];
+    const data = await fetchRank(player.name, player.tag);
 
-    const now = Date.now();
-    localStorage.setItem("lastUpdate", now.toString());
-    setLastUpdate(now);
-    setPlayerData(results);
-  };
+    results.push({
+      ...player,
+      rank: `${data.tier} ${data.rank} - ${data.lp} LP`,
+      wins: data.wins,
+      losses: data.losses,
+    });
+
+    // Espera 1 segundo después de cada 5 solicitudes
+    if ((i + 1) % 5 === 0 && i !== players.length - 1) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    }
+  }
+
+  results.sort(compararRank);
+  const max = Math.max(...results.map(p => (p.wins ?? 0) + (p.losses ?? 0)));
+  setMaxPartidas(max);
+
+  const now = Date.now();
+  localStorage.setItem("lastUpdate", now.toString());
+  setLastUpdate(now);
+  setPlayerData(results);
+  setLoading(false); // ocultar throbber
+};
+
 
   const getTimeSince = (timestamp: number) => {
       const diff = Date.now() - timestamp;
@@ -287,9 +299,16 @@ export default function Home() {
 
   return (
     <main className={styles.main} style={{ margin: 0 }}>  
+
+
       <body style={{ margin: 0 }}>
       <h1 className={styles.title}>SOLOQ CHALLENGE</h1>
-
+        {loading && (
+      <div className={styles.loaderContainer}>
+        <div className={styles.loader}></div>
+        <p className={styles.cargandoDatos}>Cargando datos...</p>
+      </div>
+      )}
       <div className={styles.controls}>
        <button
         className={`${!canRefresh ? styles.refreshButtonMal : styles.refreshButton}`}

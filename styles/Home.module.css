@@ -101,3 +101,29 @@
   margin-right: 0.5rem;
   object-fit: cover;
 }
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.loader {
+border: 6px solid #f3f3f3;
+border-top: 6px solid #005925;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+animation: spin 1s linear infinite;
+margin-bottom: 10px;
+}
+.cargandoDatos{
+  color: white;
+  font-weight: bold;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
