@@ -307,6 +307,8 @@ export default function Home() {
       <div className={styles.loaderContainer}>
         <div className={styles.loader}></div>
         <p className={styles.cargandoDatos}>Cargando datos...</p>
+        <div className={styles.cargandoDatosPetit}>El tiempo de espera es necesario para evitar la sobrecarga de la API sorry 😜</div>
+
       </div>
       )}
       <div className={styles.controls}>
