@@ -17,6 +17,9 @@ const players = [
   { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/basic.jpg" },
   { name: "xBurgo", tag: "BURGO", imageUrl: "/images/biengo.jpg" },
   { name: "Gol D Loren", tag: "2330", imageUrl: "/images/loren.jpg" },
+  { name: "danielgv1498", tag: "Poppy", imageUrl: "/images/dani.jpg" },
+  { name: "BurgoLover", tag: "3642", imageUrl: "/images/huevito.jpg" },
+
 ];
 
 
