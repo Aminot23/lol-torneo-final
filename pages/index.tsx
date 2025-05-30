@@ -20,6 +20,7 @@ const players = [
   { name: "danielgv1498", tag: "Poppy", imageUrl: "/images/dani.jpg" },
   { name: "BurgoLover", tag: "3642", imageUrl: "/images/huevito.jpg" },
   { name: "SoloQoala", tag: "Uzhas", imageUrl: "/images/alferez.jpg" },
+  { name: "50 swags of bard", tag: "EUW", imageUrl: "/images/aleano.jpg" },
 ];
 
 
