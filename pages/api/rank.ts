@@ -5,32 +5,32 @@ import { SummonerRankEntry } from '../../lib/types';
 const RIOT_API_KEY = process.env.RIOT_API_KEY;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { summonerName } = req.query;
+  const { puuid } = req.query;
 
-  if (!summonerName || typeof summonerName !== "string") {
-    return res.status(400).json({ error: "Missing summoner name" });
-  }
+  // if (!summonerName || typeof summonerName !== "string") {
+  //   return res.status(400).json({ error: "Missing summoner name" });
+  // }
 
-  const [name, tag] = summonerName.split("/");
 
   try {
-    // Paso 1: Obtener Summoner ID
-    const summonerRes = await fetch(
-      `https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`,
-      {
-        headers: {
-          "X-Riot-Token": RIOT_API_KEY!,
-        },
-      }
-    );
+    // // Paso 1: Obtener Summoner ID
+    // const summonerRes = await fetch(
+    //   `https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`,
+    //   {
+    //     headers: {
+    //       "X-Riot-Token": RIOT_API_KEY!,
+    //     },
+    //   }
+    // );
 
-    if (!summonerRes.ok) throw new Error("Summoner not found");
+    // if (!summonerRes.ok) throw new Error("Summoner not found");
 
-    const summonerData = await summonerRes.json();
+    // const summonerData = await summonerRes.json();
 
-    // Paso 2: Obtener ranking
+    // Paso 1: Obtener ranking
+    console.log("--------------------- "+puuid+" este es el puuid--------------------------")
     const rankRes = await fetch(
-      `https://euw1.api.riotgames.com/lol/league/v4/entries/by-puuid/${summonerData.puuid}`,
+      `https://euw1.api.riotgames.com/lol/league/v4/entries/by-puuid/${puuid}`,
       {
         headers: {
           "X-Riot-Token": RIOT_API_KEY!,
@@ -44,7 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Paso 3: Verificar si está en partida activa
     let estado = false;
     const activeGameRes = await fetch(
-      `https://euw1.api.riotgames.com/lol/spectator/v5/active-games/by-summoner/${summonerData.puuid}`,
+      `https://euw1.api.riotgames.com/lol/spectator/v5/active-games/by-summoner/${puuid}`,
       {
         headers: {
           "X-Riot-Token": RIOT_API_KEY!,
@@ -60,7 +60,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     res.status(200).json({
-      summonerName: summonerData.gameName,
       tier: soloQ?.tier || "UNRANKED",
       rank: soloQ?.rank || "",
       lp: soloQ?.leaguePoints || 0,

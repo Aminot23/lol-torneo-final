@@ -8,6 +8,7 @@ export interface Player {
   wins: number;
   losses: number;
   estado: boolean;
+  puuid: string;
 }
 
 export interface SummonerRankEntry {
