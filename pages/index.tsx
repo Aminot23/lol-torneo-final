@@ -12,9 +12,9 @@ const players = [
   { name: "NONTRENO", tag: "973", imageUrl: "/images/carlitos.jpg" },
   { name: "Ayiyiyiyi", tag: "Yiyi", imageUrl: "/images/basic.jpg" },
   { name: "Sidus92", tag: "EUW", imageUrl: "/images/basic.jpg" },
-  { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/chicho.jpg" },
+  { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/basic.jpg" },
   { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg" },
-  { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/extintor.jpg" },
+  { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/basic.jpg" },
   { name: "xBurgo", tag: "BURGO", imageUrl: "/images/biengo.jpg" },
   { name: "Gol D Loren", tag: "2330", imageUrl: "/images/loren.jpg" },
   { name: "danielgv1498", tag: "Poppy", imageUrl: "/images/dani.jpg" },
@@ -36,6 +36,7 @@ const ligaOrden = [
 ];
 const divisionOrden = ["I", "II", "III", "IV"];
 const emojiOrder = ["🔥", "😅", "🙂", "🥶", "🧊"];
+
 
 function compararRank(a: Player, b: Player) {
   if (!a.rank) return 1;
@@ -98,6 +99,7 @@ export default function Home() {
       rank: `${data.tier} ${data.rank} - ${data.lp} LP`,
       wins: data.wins,
       losses: data.losses,
+      estado: data.estado,
     });
 
     // Espera 1 segundo después de cada 5 solicitudes
@@ -151,7 +153,7 @@ export default function Home() {
 
   const canRefresh = !lastUpdate || Date.now() - lastUpdate > REFRESH_TIME;
 
-  const [sortBy, setSortBy] = useState<"pos" | "name" | "rank" | "partidas" | "wr" | "actividad">("pos");
+  const [sortBy, setSortBy] = useState<"pos" | "name" | "rank" | "partidas" | "wr" | "actividad" | "estado">("pos");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
 
   const getActividadLevel = (wins?: number, losses?: number, maxPartidas?: number): string => {
@@ -200,11 +202,21 @@ export default function Home() {
       const indexB = emojiOrder.indexOf(emojiB);
       return sortDir === "asc" ? indexA - indexB : indexB - indexA;
     });
-  }
+    
+    } else if (sortBy === "estado") {
+      sorted.sort((a, b) => {
+        const estadoA = a.estado ? 0 : 1; 
+        const estadoB = b.estado ? 0 : 1;
+        return sortDir === "asc" ? estadoA - estadoB : estadoB - estadoA;
+      });
+    }
+
+
+
     return sorted;
   };
 
-  const handleSort = (col: "pos" | "name" | "rank" | "partidas" | "wr" | "actividad") => {
+  const handleSort = (col: "pos" | "name" | "rank" | "partidas" | "wr" | "actividad" | "estado") => {
     if (sortBy === col) {
       setSortDir(sortDir === "asc" ? "desc" : "asc");
     } else {
@@ -217,7 +229,41 @@ export default function Home() {
     const url = `https://op.gg/es/lol/summoners/euw/${link}`;
     window.open(url, '_blank');
   };
-
+  const getEstadoJugador = (estado: boolean) =>{
+    if(estado){
+      return (<span
+          style={{
+            fontSize: "1.5rem",
+            color: "#1e90ff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            width: "100%",
+          }}
+          title={"JUGANDO!"}
+        >
+          🟢
+        </span>)
+        }
+      else{
+        return (<span
+          style={{
+            fontSize: "1.5rem",
+            color: "#1e90ff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            width: "100%",
+          }}
+          title={"Desconectado"}
+        >
+          🔴
+        </span>)
+        }
+      }
+  
   const getActividadEmoji = (wins?: number, losses?: number) => {
     const total = (wins ?? 0) + (losses ?? 0);
 
@@ -353,6 +399,10 @@ export default function Home() {
                 Actividad
                 {sortBy === "actividad" && (sortDir === "asc" ? " ▲" : " ▼")}
               </th>
+              <th onClick={() => handleSort("estado")}>
+                Estado
+                {sortBy === "estado" && (sortDir === "asc" ? " ▲" : " ▼")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -391,6 +441,10 @@ export default function Home() {
                 <td>
                   {getActividadEmoji(player.wins, player.losses)}
                 </td>
+                <td>
+                  {getEstadoJugador(player.estado)}
+                </td>
+
               </tr>
             ))}
           </tbody>
