@@ -41,23 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const rankData = await rankRes.json();
     const soloQ = rankData.find((entry: SummonerRankEntry) => entry.queueType === "RANKED_SOLO_5x5");
 
-    // Paso 3: Verificar si está en partida activa
-    let estado = false;
-    const activeGameRes = await fetch(
-      `https://euw1.api.riotgames.com/lol/spectator/v5/active-games/by-summoner/${puuid}`,
-      {
-        headers: {
-          "X-Riot-Token": RIOT_API_KEY!,
-        },
-      }
-    );
-
-    if (activeGameRes.status === 200) {
-      const gameData = await activeGameRes.json();
-      if (gameData?.gameId) {
-        estado = true;
-      }
-    }
 
     res.status(200).json({
       tier: soloQ?.tier || "UNRANKED",
@@ -65,7 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       lp: soloQ?.leaguePoints || 0,
       wins: soloQ?.wins || 0,
       losses: soloQ?.losses || 0,
-      estado,
     });
   } catch (error) {
     console.error(error);

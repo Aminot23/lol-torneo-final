@@ -7,7 +7,6 @@ export interface Player {
   tag: string;
   wins: number;
   losses: number;
-  estado: boolean;
   puuid: string;
 }
 

@@ -99,13 +99,12 @@ export default function Home() {
       rank: `${data.tier} ${data.rank} - ${data.lp} LP`,
       wins: data.wins,
       losses: data.losses,
-      estado: data.estado,
       puuid: ""
     });
 
     // Espera 1 segundo después de cada 5 solicitudes
     if ((i + 1) % 5 === 0 && i !== players.length - 1) {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 500));
     }
   }
 
@@ -203,14 +202,7 @@ export default function Home() {
       const indexB = emojiOrder.indexOf(emojiB);
       return sortDir === "asc" ? indexA - indexB : indexB - indexA;
     });
-    
-    } else if (sortBy === "estado") {
-      sorted.sort((a, b) => {
-        const estadoA = a.estado ? 0 : 1; 
-        const estadoB = b.estado ? 0 : 1;
-        return sortDir === "asc" ? estadoA - estadoB : estadoB - estadoA;
-      });
-    }
+  }
 
 
 
@@ -230,40 +222,40 @@ export default function Home() {
     const url = `https://op.gg/es/lol/summoners/euw/${link}`;
     window.open(url, '_blank');
   };
-  const getEstadoJugador = (estado: boolean) =>{
-    if(estado){
-      return (<span
-          style={{
-            fontSize: "1.5rem",
-            color: "#1e90ff",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100%",
-            width: "100%",
-          }}
-          title={"JUGANDO!"}
-        >
-          🟢
-        </span>)
-        }
-      else{
-        return (<span
-          style={{
-            fontSize: "1.5rem",
-            color: "#1e90ff",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100%",
-            width: "100%",
-          }}
-          title={"Desconectado"}
-        >
-          🔴
-        </span>)
-        }
-      }
+  // const getEstadoJugador = (estado: boolean) =>{
+  //   if(estado){
+  //     return (<span
+  //         style={{
+  //           fontSize: "1.5rem",
+  //           color: "#1e90ff",
+  //           display: "flex",
+  //           alignItems: "center",
+  //           justifyContent: "center",
+  //           height: "100%",
+  //           width: "100%",
+  //         }}
+  //         title={"JUGANDO!"}
+  //       >
+  //         🟢
+  //       </span>)
+  //       }
+  //     else{
+  //       return (<span
+  //         style={{
+  //           fontSize: "1.5rem",
+  //           color: "#1e90ff",
+  //           display: "flex",
+  //           alignItems: "center",
+  //           justifyContent: "center",
+  //           height: "100%",
+  //           width: "100%",
+  //         }}
+  //         title={"Desconectado"}
+  //       >
+  //         🔴
+  //       </span>)
+  //       }
+  //     }
   
   const getActividadEmoji = (wins?: number, losses?: number) => {
     const total = (wins ?? 0) + (losses ?? 0);
@@ -400,10 +392,6 @@ export default function Home() {
                 Actividad
                 {sortBy === "actividad" && (sortDir === "asc" ? " ▲" : " ▼")}
               </th>
-              <th onClick={() => handleSort("estado")}>
-                Estado
-                {sortBy === "estado" && (sortDir === "asc" ? " ▲" : " ▼")}
-              </th>
             </tr>
           </thead>
           <tbody>
@@ -442,10 +430,6 @@ export default function Home() {
                 <td>
                   {getActividadEmoji(player.wins, player.losses)}
                 </td>
-                <td>
-                  {getEstadoJugador(player.estado)}
-                </td>
-
               </tr>
             ))}
           </tbody>
