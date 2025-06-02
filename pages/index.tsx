@@ -455,21 +455,23 @@ export default function Home() {
               height={40}
               className={styles.avatar}
             />
-            {isLoser && (
-              <span
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  right: 0,
-                  fontSize: '1.2rem',
-                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                  borderRadius: '50%',
-                  padding: '0 2px',
-                }}
-              >
-                🤡
-              </span>
-            )}
+            {(isLoser || player.rarra) && (
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
+                    fontSize: '1.2rem',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    borderRadius: '50%',
+                    padding: '0 4px',
+                  }}
+                >
+                  {isLoser && '🤡'}
+                  {player.rarra && '🦠'}
+                </span>
+              )}
+
           </div>
           {player.name}
         </td>
