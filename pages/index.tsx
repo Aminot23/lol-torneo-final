@@ -11,7 +11,7 @@ const players = [
   { name: "matajare21", tag: "9781", imageUrl: "/images/basic.jpg", puuid:"bcKpsrVrmuN86RVmurEdx68evBJUpmOv_vio0ErhK35sKmtPNny4d5qXcSknwzqcR2aXVI8iHEeykQ", rarra: false  },
   { name: "NONTRENO", tag: "973", imageUrl: "/images/carlitos.jpg", puuid:"_rbzhwH44Xurll5x1PPOau7i-lN2gSPHd8dv6ko1qCJ4FpCcjRCFqJSQ50WrJV6rIZbBGmd_xjWBgQ", rarra: false  },
   { name: "Ayiyiyiyi", tag: "Yiyi", imageUrl: "/images/basic.jpg", puuid:"C1Vv5nMdUqR6Mcv6hX-xhMx-8DUiYxS5IZFb1BYU_LUAvxFv1tkEITbttY0TK2UMRtQrmHrzs4Yd0g", rarra: false  },
-  { name: "Sidus92", tag: "EUW", imageUrl: "/images/basic.jpg", puuid:"Klde1A0aCs3KPRkTLzjX233R6PdX95X4isCztnCvh8aCuB4B_8zUrYpkjIlR5W3YHKHmL19uaTFGXA", rarra: false  },
+  { name: "Sidus92", tag: "EUW", imageUrl: "/images/mithel.jpg", puuid:"Klde1A0aCs3KPRkTLzjX233R6PdX95X4isCztnCvh8aCuB4B_8zUrYpkjIlR5W3YHKHmL19uaTFGXA", rarra: false  },
   { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/chicho.jpg", puuid:"FVEFa5zoHFNkPb4WrSkmxpCNjpR8nWK2_gDtAC3P1M07UWVG-RVZitBAZus3K7j6oZAKtydIC5daIQ", rarra: false  },
   { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg", puuid:"7xyxwmOByEONH_MX6X44XYeeYQiFHwurVQ9qpegYSBmPc5WlFg3lttvn1LYhnQE3XWO178hDN9PTPg", rarra: false  },
   { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/extintor.jpg", puuid:"MgASkBw9vKQngRalplmMKDt9CzBCClclt4ZjgqNyUT-Me9Uz4CMmaIuYXd3I6cjDW74VMt5Pu0NAaA", rarra: false  },
