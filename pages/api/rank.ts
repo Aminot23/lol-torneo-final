@@ -28,7 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // const summonerData = await summonerRes.json();
 
     // Paso 1: Obtener ranking
-    console.log("--------------------- "+puuid+" este es el puuid--------------------------")
     const rankRes = await fetch(
       `https://euw1.api.riotgames.com/lol/league/v4/entries/by-puuid/${puuid}`,
       {

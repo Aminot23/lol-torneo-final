@@ -130,6 +130,18 @@ export default function Home() {
       return `${minutes} min ${seconds} seg.`;
     };
 
+    function getRARRA(): number {
+      const startDate = new Date("2025-01-01");
+      const today = new Date();
+
+      const diffTime = today.getTime() - startDate.getTime();
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+      return diffDays % 17;
+    }
+
+  
+
   useEffect(() => {
     const stored = localStorage.getItem("lastUpdate");
     if (stored) {
@@ -396,7 +408,11 @@ export default function Home() {
           </thead>
           <tbody>
             {getSortedData().map((player, idx) => (
-              <tr key={idx} title={`Partidas totales: ${player.wins + player.losses}`}>
+                <tr
+                  key={idx}
+                  title={`Partidas totales: ${player.wins + player.losses}`}
+                  style={idx === getRARRA() ? { backgroundColor: 'purple' } : undefined}
+                >
                 <td>{idx + 1}</td>
                   <td
                     onClick={() => abrirOpGG(player.name + "-" + player.tag)}
