@@ -90,6 +90,8 @@ export default function Home() {
 
   const results: Player[] = [];
 
+  const idxRARRA = getRARRA();
+
   for (let i = 0; i < players.length; i++) {
     const player = players[i];
     const data = await fetchRank(player.puuid);
@@ -99,10 +101,10 @@ export default function Home() {
       rank: `${data.tier} ${data.rank} - ${data.lp} LP`,
       wins: data.wins,
       losses: data.losses,
-      puuid: "",
+      rarra: i === idxRARRA,
+      topWins: false,
     });
 
-    // Espera 1 segundo después de cada 5 solicitudes
     if ((i + 1) % 5 === 0 && i !== players.length - 1) {
       await new Promise((resolve) => setTimeout(resolve, 500));
     }
@@ -124,6 +126,7 @@ export default function Home() {
   setLastUpdate(now);
   setPlayerData(results);
   setLoading(false); // ocultar throbber
+  console.log("Jugador con RARRA:", results.find(p => p.rarra));
 };
 
 
@@ -149,12 +152,8 @@ export default function Home() {
       const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
       return diffDays % 17;
     }
+  console.log("---------- Hoy RARRA es para el índice:", getRARRA());
 
-    const idxRARRA=getRARRA();
-    for (let i = 0; i < players.length; i++) {
-      if(idxRARRA===i)players[i].rarra=true;
-    }
-  
 
   useEffect(() => {
     const stored = localStorage.getItem("lastUpdate");
@@ -444,11 +443,11 @@ export default function Home() {
           background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
         };
       }
-      if (hasRarra) {
-        return {
-          backgroundColor: 'purple',
-        };
-      }
+      // if (hasRarra) {
+      //   return {
+      //     backgroundColor: 'purple',
+      //   };
+      // }
       
       return undefined;
     })();
