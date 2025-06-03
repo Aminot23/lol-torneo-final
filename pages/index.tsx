@@ -4,23 +4,23 @@ import styles from "../styles/Home.module.css";
 import { Player } from "../lib/types";
 
 const players = [
-  { name: "PEUGEOT 206", tag: "2003", imageUrl: "/images/amine.jpg", puuid: "bNnhILnZpp82o1cLSbgobBfmHmkboDpO27eG8xJAo0IkdUkn2sWk6upeDAW_KQYuneKi7EcixoOdaw", rarra: false },
-  { name: "MiriiCs", tag: "EUW", imageUrl: "/images/basic.jpg", puuid:"RmtGov9-QWUbVvbcfSyBwFTzQ_jvt6H2P1dEUzKvm1F13UrNlv1Esm51mc1xgwr6ZvXxhx_LavNBUg", rarra: false  },
-  { name: "Blacknalla", tag: "EUW", imageUrl: "/images/basic.jpg", puuid:"4HCtWP1RXcww8W5CxNh5jZgaEaRbjQP3UN2iiXAtMEDDGGreKYnPJ1IdCqaI-xgyehc3Nz1_HEfYMw", rarra: false  },
-  { name: "Reze", tag: "SLN", imageUrl: "/images/selene.jpg", puuid:"sf33K0twqOt0Qouf47AImIe5HJYrnWtIFbSlzNXci-_AUcHXpi7VG56n8ZwDTFuwopHnxNoeiBbpNw", rarra: false  },
-  { name: "matajare21", tag: "9781", imageUrl: "/images/basic.jpg", puuid:"bcKpsrVrmuN86RVmurEdx68evBJUpmOv_vio0ErhK35sKmtPNny4d5qXcSknwzqcR2aXVI8iHEeykQ", rarra: false  },
-  { name: "NONTRENO", tag: "973", imageUrl: "/images/carlitos.jpg", puuid:"_rbzhwH44Xurll5x1PPOau7i-lN2gSPHd8dv6ko1qCJ4FpCcjRCFqJSQ50WrJV6rIZbBGmd_xjWBgQ", rarra: false  },
-  { name: "Ayiyiyiyi", tag: "Yiyi", imageUrl: "/images/basic.jpg", puuid:"C1Vv5nMdUqR6Mcv6hX-xhMx-8DUiYxS5IZFb1BYU_LUAvxFv1tkEITbttY0TK2UMRtQrmHrzs4Yd0g", rarra: false  },
-  { name: "Sidus92", tag: "EUW", imageUrl: "/images/mithel.jpg", puuid:"Klde1A0aCs3KPRkTLzjX233R6PdX95X4isCztnCvh8aCuB4B_8zUrYpkjIlR5W3YHKHmL19uaTFGXA", rarra: false  },
-  { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/chicho.jpg", puuid:"FVEFa5zoHFNkPb4WrSkmxpCNjpR8nWK2_gDtAC3P1M07UWVG-RVZitBAZus3K7j6oZAKtydIC5daIQ", rarra: false  },
-  { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg", puuid:"7xyxwmOByEONH_MX6X44XYeeYQiFHwurVQ9qpegYSBmPc5WlFg3lttvn1LYhnQE3XWO178hDN9PTPg", rarra: false  },
-  { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/extintor.jpg", puuid:"MgASkBw9vKQngRalplmMKDt9CzBCClclt4ZjgqNyUT-Me9Uz4CMmaIuYXd3I6cjDW74VMt5Pu0NAaA", rarra: false  },
-  { name: "xBurgo", tag: "BURGO", imageUrl: "/images/biengo.jpg", puuid:"o5vLHUTwCdmsLw_q7LRVWJBLCfHJ-GLkUEKAJF5GsnZqroETgIsBM_4VIG62EXlzSBJlMAX5sFDeCA", rarra: false  },
-  { name: "Gol D Loren", tag: "2330", imageUrl: "/images/loren.jpg", puuid:"J6NMoT6gvwWTVH37jOdwJzv443zUN3W6KFt5tyPTVj8ox0VCkhdcDt8YHUGFYYRsmA7lLYHxHUkyNw", rarra: false  },
-  { name: "danielgv1498", tag: "Poppy", imageUrl: "/images/dani.jpg", puuid:"VgpyuisX0CiU5uCDcze2NxYqVqzvw8nsOsE2hGtG1jouhXlae_-ySD7Xtu2Rr14yZoevV2tgaIXIZw", rarra: false  },
-  { name: "BurgoLover", tag: "3642", imageUrl: "/images/huevito.jpg", puuid:"vM-GtEnkYgUbwk4mfVy0gHhLp7EEFye0Us1eZW8Zj_564rvW8il43qnjb3uuAoDB8RYb9QkufaEC3w", rarra: false  },
-  { name: "SoloQoala", tag: "Uzhas", imageUrl: "/images/alferez.jpg", puuid:"EV1UX_ZfLAYAfZZDs_ztFIazp31fKBmnsaIPx3bv-F-sas3eNTu_WaJt7vsEjf7b11adX1gUnowYlA", rarra: false  },
-  { name: "50 swags of bard", tag: "EUW", imageUrl: "/images/aleano.jpg", puuid:"b7mWGfjWNC6cd7CmzpCngvw_V-HVi9YUZM4Xr3KJ44JCwvtqF4UYWzHzuBOgzfFt3w5lU_jWNiQ-yQ", rarra: false  },
+  { name: "PEUGEOT 206", tag: "2003", imageUrl: "/images/amine.jpg", puuid: "bNnhILnZpp82o1cLSbgobBfmHmkboDpO27eG8xJAo0IkdUkn2sWk6upeDAW_KQYuneKi7EcixoOdaw", rarra: false, topWins: false },
+  { name: "MiriiCs", tag: "EUW", imageUrl: "/images/basic.jpg", puuid:"RmtGov9-QWUbVvbcfSyBwFTzQ_jvt6H2P1dEUzKvm1F13UrNlv1Esm51mc1xgwr6ZvXxhx_LavNBUg", rarra: false, topWins: false  },
+  { name: "Blacknalla", tag: "EUW", imageUrl: "/images/basic.jpg", puuid:"4HCtWP1RXcww8W5CxNh5jZgaEaRbjQP3UN2iiXAtMEDDGGreKYnPJ1IdCqaI-xgyehc3Nz1_HEfYMw", rarra: false, topWins: false  },
+  { name: "Reze", tag: "SLN", imageUrl: "/images/selene.jpg", puuid:"sf33K0twqOt0Qouf47AImIe5HJYrnWtIFbSlzNXci-_AUcHXpi7VG56n8ZwDTFuwopHnxNoeiBbpNw", rarra: false, topWins: false  },
+  { name: "matajare21", tag: "9781", imageUrl: "/images/basic.jpg", puuid:"bcKpsrVrmuN86RVmurEdx68evBJUpmOv_vio0ErhK35sKmtPNny4d5qXcSknwzqcR2aXVI8iHEeykQ", rarra: false, topWins: false  },
+  { name: "NONTRENO", tag: "973", imageUrl: "/images/carlitos.jpg", puuid:"_rbzhwH44Xurll5x1PPOau7i-lN2gSPHd8dv6ko1qCJ4FpCcjRCFqJSQ50WrJV6rIZbBGmd_xjWBgQ", rarra: false, topWins: false  },
+  { name: "Ayiyiyiyi", tag: "Yiyi", imageUrl: "/images/basic.jpg", puuid:"C1Vv5nMdUqR6Mcv6hX-xhMx-8DUiYxS5IZFb1BYU_LUAvxFv1tkEITbttY0TK2UMRtQrmHrzs4Yd0g", rarra: false, topWins: false  },
+  { name: "Sidus92", tag: "EUW", imageUrl: "/images/mithel.jpg", puuid:"Klde1A0aCs3KPRkTLzjX233R6PdX95X4isCztnCvh8aCuB4B_8zUrYpkjIlR5W3YHKHmL19uaTFGXA", rarra: false, topWins: false  },
+  { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/chicho.jpg", puuid:"FVEFa5zoHFNkPb4WrSkmxpCNjpR8nWK2_gDtAC3P1M07UWVG-RVZitBAZus3K7j6oZAKtydIC5daIQ", rarra: false, topWins: false  },
+  { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg", puuid:"7xyxwmOByEONH_MX6X44XYeeYQiFHwurVQ9qpegYSBmPc5WlFg3lttvn1LYhnQE3XWO178hDN9PTPg", rarra: false, topWins: false  },
+  { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/extintor.jpg", puuid:"MgASkBw9vKQngRalplmMKDt9CzBCClclt4ZjgqNyUT-Me9Uz4CMmaIuYXd3I6cjDW74VMt5Pu0NAaA", rarra: false, topWins: false  },
+  { name: "xBurgo", tag: "BURGO", imageUrl: "/images/biengo.jpg", puuid:"o5vLHUTwCdmsLw_q7LRVWJBLCfHJ-GLkUEKAJF5GsnZqroETgIsBM_4VIG62EXlzSBJlMAX5sFDeCA", rarra: false, topWins: false  },
+  { name: "Gol D Loren", tag: "2330", imageUrl: "/images/loren.jpg", puuid:"J6NMoT6gvwWTVH37jOdwJzv443zUN3W6KFt5tyPTVj8ox0VCkhdcDt8YHUGFYYRsmA7lLYHxHUkyNw", rarra: false, topWins: false  },
+  { name: "danielgv1498", tag: "Poppy", imageUrl: "/images/dani.jpg", puuid:"VgpyuisX0CiU5uCDcze2NxYqVqzvw8nsOsE2hGtG1jouhXlae_-ySD7Xtu2Rr14yZoevV2tgaIXIZw", rarra: false, topWins: false  },
+  { name: "BurgoLover", tag: "3642", imageUrl: "/images/huevito.jpg", puuid:"vM-GtEnkYgUbwk4mfVy0gHhLp7EEFye0Us1eZW8Zj_564rvW8il43qnjb3uuAoDB8RYb9QkufaEC3w", rarra: false, topWins: false  },
+  { name: "SoloQoala", tag: "Uzhas", imageUrl: "/images/alferez.jpg", puuid:"EV1UX_ZfLAYAfZZDs_ztFIazp31fKBmnsaIPx3bv-F-sas3eNTu_WaJt7vsEjf7b11adX1gUnowYlA", rarra: false, topWins: false  },
+  { name: "50 swags of bard", tag: "EUW", imageUrl: "/images/aleano.jpg", puuid:"b7mWGfjWNC6cd7CmzpCngvw_V-HVi9YUZM4Xr3KJ44JCwvtqF4UYWzHzuBOgzfFt3w5lU_jWNiQ-yQ", rarra: false, topWins: false  },
 ];
 
 
@@ -109,6 +109,13 @@ export default function Home() {
   }
 
   results.sort(compararRank);
+
+  const mejorJugador = results[0];
+  if (mejorJugador) {
+    results.forEach((p) => {
+      p.topWins = p === mejorJugador;
+    });
+  }
   const max = Math.max(...results.map(p => (p.wins ?? 0) + (p.losses ?? 0)));
   setMaxPartidas(max);
 
@@ -143,8 +150,6 @@ export default function Home() {
     for (let i = 0; i < players.length; i++) {
       if(idxRARRA===i)players[i].rarra=true;
     }
-
-
   
 
   useEffect(() => {
@@ -416,10 +421,17 @@ export default function Home() {
     const totalGames = player.wins + player.losses;
     const isLoser = player.losses > player.wins;
     const hasRarra=player.rarra;
+    const isMejor=player.topWins;
     const estiloRarra = (() => {
+      if(isMejor){
+        return {
+          background: '#ffcd00',
+          border: '5px solid #d3a900',
+        };
+      }
       if (hasRarra && isLoser) {
         return {
-          backgroundColor: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
+          background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
           border: '10px solid purple',
         };
       }
@@ -433,6 +445,7 @@ export default function Home() {
           backgroundColor: 'purple',
         };
       }
+      
       return undefined;
     })();
     return (
@@ -455,18 +468,18 @@ export default function Home() {
               height={40}
               className={styles.avatar}
             />
-            {(isLoser || player.rarra) && (
+            {(isLoser || player.rarra || isMejor) && (
                 <span
                   style={{
                     position: 'absolute',
-                    top: 0,
-                    right: 0,
+                    top: -5,
+                    right: 5,
                     fontSize: '1.2rem',
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                    borderRadius: '50%',
+                    borderRadius: '30%',
                     padding: '0 4px',
                   }}
                 >
+                  {isMejor && '👑'}
                   {isLoser && '🤡'}
                   {player.rarra && '🦠'}
                 </span>

@@ -9,6 +9,7 @@ export interface Player {
   losses: number;
   puuid: string;
   rarra: boolean;
+  topWins: boolean;
 }
 
 export interface SummonerRankEntry {
