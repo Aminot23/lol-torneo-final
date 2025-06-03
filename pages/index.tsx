@@ -137,15 +137,19 @@ export default function Home() {
       return `${minutes} min ${seconds} seg.`;
     };
 
-    function getRARRA(): number {
-      const startDate = new Date("2025-01-01");
-      const today = new Date();
+      function getRARRA(): number {
+      const startDate = Date.UTC(2025, 0, 1); // 0 = enero
+      const todayUTC = new Date();
+      const today = Date.UTC(
+        todayUTC.getUTCFullYear(),
+        todayUTC.getUTCMonth(),
+        todayUTC.getUTCDate()
+      );
 
-      const diffTime = today.getTime() - startDate.getTime();
-      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-      return (diffDays % 17);
+      const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+      return diffDays % 17;
     }
+
     const idxRARRA=getRARRA();
     for (let i = 0; i < players.length; i++) {
       if(idxRARRA===i)players[i].rarra=true;
