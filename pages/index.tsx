@@ -140,19 +140,22 @@ export default function Home() {
       return `${minutes} min ${seconds} seg.`;
     };
 
-      function getRARRA(): number {
-      const startDate = Date.UTC(2025, 0, 1); // 0 = enero
-      const todayUTC = new Date();
-      const today = Date.UTC(
-        todayUTC.getUTCFullYear(),
-        todayUTC.getUTCMonth(),
-        todayUTC.getUTCDate()
-      );
+function getRARRA(): number {
+  const startDate = Date.UTC(2025, 0, 1); // 0 = enero
 
-      const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-      return diffDays % 17;
-    }
-  console.log("---------- Hoy RARRA es para el índice:", getRARRA());
+  const now = new Date();
+  const utcPlus2 = new Date(now.getTime() + 2 * 60 * 60 * 1000); // Añade 2 horas (UTC+2)
+
+  const today = Date.UTC(
+    utcPlus2.getUTCFullYear(),
+    utcPlus2.getUTCMonth(),
+    utcPlus2.getUTCDate()
+  );
+
+  const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+  return diffDays % 17;
+}
+
 
 
   useEffect(() => {
@@ -443,11 +446,11 @@ export default function Home() {
           background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
         };
       }
-      // if (hasRarra) {
-      //   return {
-      //     backgroundColor: 'purple',
-      //   };
-      // }
+      if (hasRarra) {
+        return {
+          backgroundColor: 'purple',
+        };
+      }
       
       return undefined;
     })();
