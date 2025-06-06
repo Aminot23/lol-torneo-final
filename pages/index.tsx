@@ -454,6 +454,16 @@ function getRARRA(): number {
       
       return undefined;
     })();
+    const estiloEnfermo = (() => {
+    if (player.wins + player.losses > 99) {
+        return {
+            background: 'linear-gradient(-45deg, #ff0000, #ff9900, #ffff00, #ff0000)',
+            backgroundSize: '600% 600%',
+            animation: 'fuego 0.5s infinite ease-in-out',
+        };
+    }
+    return undefined;
+    })();
     return (
       <tr
         key={idx}
@@ -499,8 +509,9 @@ function getRARRA(): number {
             ? "UNRANKED"
             : player.rank}
         </td>
-        <td>
-          {player.rank?.toUpperCase().includes("UNRANKED")
+        <td
+            style={estiloEnfermo}>
+            {player.rank?.toUpperCase().includes("UNRANKED")
             ? "-"
             : `V: ${player.wins} D: ${player.losses}`}
         </td>
