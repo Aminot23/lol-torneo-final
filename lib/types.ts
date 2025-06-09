@@ -12,6 +12,7 @@ export interface Player {
   topWins: boolean;
   rango: string;
   division: string;
+  lps: string;
 }
 
 export interface SummonerRankEntry {

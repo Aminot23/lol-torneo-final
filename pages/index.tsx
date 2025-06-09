@@ -105,6 +105,7 @@ export default function Home() {
       topWins: false,
       rango:`${data.tier}`,
       division: `${data.rank}`,
+      lps: `${data.lp}`,
     });
 
     if ((i + 1) % 5 === 0 && i !== players.length - 1) {
@@ -517,12 +518,12 @@ function getRARRA(): number {
                 width={40}
                 height={40}
               />
-              <span className="font-extrabold">{player.division}</span>
+              <span className="font-extrabold">{player.division} </span>
+              <span className="font-extrabold"> {player.lps} LP</span>
+
             </div>
           )}
         </td>
-
-
         <td
             style={estiloEnfermo}>
             {player.rank?.toUpperCase().includes("UNRANKED")
