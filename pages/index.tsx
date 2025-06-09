@@ -398,7 +398,7 @@ function getRARRA(): number {
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <thead>
-            <tr>
+          <tr className={styles.row}>
               <th onClick={() => handleSort("pos")}>
                 #
                 {sortBy === "pos" && (sortDir === "asc" ? " ▲" : " ▼")}
@@ -472,6 +472,7 @@ function getRARRA(): number {
         key={idx}
         title={`Partidas totales: ${totalGames}`}
         style={estiloRarra}
+        className={styles.row}
       >
         <td>{idx + 1}</td>
         <td
@@ -507,23 +508,23 @@ function getRARRA(): number {
           </div>
           {player.name}
         </td>
-       <td className="text-center align-middle">
-          {player.rank?.toUpperCase() === "UNRANKED" ? (
-            "UNRANKED"
-          ) : (
-            <div className="flex items-center justify-center gap-2">
-              <Image
-                src={`/images/${player.rango?.toUpperCase() || "DEFAULT"}.png`}
-                alt={player.rank}
-                width={40}
-                height={40}
-              />
-              <span className="font-extrabold">{player.division} </span>
-              <span className="font-extrabold"> {player.lps} LP</span>
-
-            </div>
-          )}
-        </td>
+          <td className={styles.cell}>
+            {player.rank?.toUpperCase() === "UNRANKED" ? (
+              "UNRANKED"
+            ) : (
+              <div className={styles.rankCellContent}>
+                <Image
+                  src={`/images/${player.rango?.toUpperCase() || "DEFAULT"}.png`}
+                  alt={player.rank}
+                  className={styles.rankImage}
+                />
+                <div className={styles.rankText}>
+                  <span>{player.division}</span>
+                  <span>{player.lps} LP</span>
+                </div>
+              </div>
+            )}
+          </td>
         <td
             style={estiloEnfermo}>
             {player.rank?.toUpperCase().includes("UNRANKED")
