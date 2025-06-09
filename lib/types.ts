@@ -10,6 +10,8 @@ export interface Player {
   puuid: string;
   rarra: boolean;
   topWins: boolean;
+  rango: string;
+  division: string;
 }
 
 export interface SummonerRankEntry {

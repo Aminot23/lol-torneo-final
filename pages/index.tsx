@@ -103,6 +103,8 @@ export default function Home() {
       losses: data.losses,
       rarra: i === idxRARRA,
       topWins: false,
+      rango:`${data.tier}`,
+      division: `${data.rank}`,
     });
 
     if ((i + 1) % 5 === 0 && i !== players.length - 1) {
@@ -504,11 +506,23 @@ function getRARRA(): number {
           </div>
           {player.name}
         </td>
-        <td>
-          {player.rank?.toUpperCase().includes("UNRANKED")
-            ? "UNRANKED"
-            : player.rank}
+       <td className="text-center align-middle">
+          {player.rank?.toUpperCase() === "UNRANKED" ? (
+            "UNRANKED"
+          ) : (
+            <div className="flex items-center justify-center gap-2">
+              <Image
+                src={`/images/${player.rango?.toUpperCase() || "DEFAULT"}.png`}
+                alt={player.rank}
+                width={40}
+                height={40}
+              />
+              <span className="font-extrabold">{player.division}</span>
+            </div>
+          )}
         </td>
+
+
         <td
             style={estiloEnfermo}>
             {player.rank?.toUpperCase().includes("UNRANKED")
