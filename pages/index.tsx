@@ -5,22 +5,22 @@ import { Player } from "../lib/types";
 
 const players = [
   { name: "PEUGEOT 206", tag: "2003", imageUrl: "/images/amine.jpg", puuid: "bNnhILnZpp82o1cLSbgobBfmHmkboDpO27eG8xJAo0IkdUkn2sWk6upeDAW_KQYuneKi7EcixoOdaw", rarra: false, topWins: false },
-  { name: "MiriiCs", tag: "EUW", imageUrl: "/images/basic.jpg", puuid:"RmtGov9-QWUbVvbcfSyBwFTzQ_jvt6H2P1dEUzKvm1F13UrNlv1Esm51mc1xgwr6ZvXxhx_LavNBUg", rarra: false, topWins: false  },
-  { name: "Blacknalla", tag: "EUW", imageUrl: "/images/basic.jpg", puuid:"4HCtWP1RXcww8W5CxNh5jZgaEaRbjQP3UN2iiXAtMEDDGGreKYnPJ1IdCqaI-xgyehc3Nz1_HEfYMw", rarra: false, topWins: false  },
-  { name: "Reze", tag: "SLN", imageUrl: "/images/selene.jpg", puuid:"sf33K0twqOt0Qouf47AImIe5HJYrnWtIFbSlzNXci-_AUcHXpi7VG56n8ZwDTFuwopHnxNoeiBbpNw", rarra: false, topWins: false  },
-  { name: "matajare21", tag: "9781", imageUrl: "/images/basic.jpg", puuid:"bcKpsrVrmuN86RVmurEdx68evBJUpmOv_vio0ErhK35sKmtPNny4d5qXcSknwzqcR2aXVI8iHEeykQ", rarra: false, topWins: false  },
-  { name: "NONTRENO", tag: "973", imageUrl: "/images/carlitos.jpg", puuid:"_rbzhwH44Xurll5x1PPOau7i-lN2gSPHd8dv6ko1qCJ4FpCcjRCFqJSQ50WrJV6rIZbBGmd_xjWBgQ", rarra: false, topWins: false  },
-  { name: "Ayiyiyiyi", tag: "Yiyi", imageUrl: "/images/basic.jpg", puuid:"C1Vv5nMdUqR6Mcv6hX-xhMx-8DUiYxS5IZFb1BYU_LUAvxFv1tkEITbttY0TK2UMRtQrmHrzs4Yd0g", rarra: false, topWins: false  },
-  { name: "Sidus92", tag: "EUW", imageUrl: "/images/mithel.jpg", puuid:"Klde1A0aCs3KPRkTLzjX233R6PdX95X4isCztnCvh8aCuB4B_8zUrYpkjIlR5W3YHKHmL19uaTFGXA", rarra: false, topWins: false  },
-  { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/chicho.jpg", puuid:"FVEFa5zoHFNkPb4WrSkmxpCNjpR8nWK2_gDtAC3P1M07UWVG-RVZitBAZus3K7j6oZAKtydIC5daIQ", rarra: false, topWins: false  },
-  { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg", puuid:"7xyxwmOByEONH_MX6X44XYeeYQiFHwurVQ9qpegYSBmPc5WlFg3lttvn1LYhnQE3XWO178hDN9PTPg", rarra: false, topWins: false  },
-  { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/extintor.jpg", puuid:"MgASkBw9vKQngRalplmMKDt9CzBCClclt4ZjgqNyUT-Me9Uz4CMmaIuYXd3I6cjDW74VMt5Pu0NAaA", rarra: false, topWins: false  },
-  { name: "xBurgo", tag: "BURGO", imageUrl: "/images/biengo.jpg", puuid:"o5vLHUTwCdmsLw_q7LRVWJBLCfHJ-GLkUEKAJF5GsnZqroETgIsBM_4VIG62EXlzSBJlMAX5sFDeCA", rarra: false, topWins: false  },
-  { name: "Gol D Loren", tag: "2330", imageUrl: "/images/loren.jpg", puuid:"J6NMoT6gvwWTVH37jOdwJzv443zUN3W6KFt5tyPTVj8ox0VCkhdcDt8YHUGFYYRsmA7lLYHxHUkyNw", rarra: false, topWins: false  },
-  { name: "danielgv1498", tag: "Poppy", imageUrl: "/images/dani.jpg", puuid:"VgpyuisX0CiU5uCDcze2NxYqVqzvw8nsOsE2hGtG1jouhXlae_-ySD7Xtu2Rr14yZoevV2tgaIXIZw", rarra: false, topWins: false  },
-  { name: "BurgoLover", tag: "3642", imageUrl: "/images/huevito.jpg", puuid:"vM-GtEnkYgUbwk4mfVy0gHhLp7EEFye0Us1eZW8Zj_564rvW8il43qnjb3uuAoDB8RYb9QkufaEC3w", rarra: false, topWins: false  },
-  { name: "SoloQoala", tag: "Uzhas", imageUrl: "/images/alferez.jpg", puuid:"EV1UX_ZfLAYAfZZDs_ztFIazp31fKBmnsaIPx3bv-F-sas3eNTu_WaJt7vsEjf7b11adX1gUnowYlA", rarra: false, topWins: false  },
-  { name: "50 swags of bard", tag: "EUW", imageUrl: "/images/aleano.jpg", puuid:"b7mWGfjWNC6cd7CmzpCngvw_V-HVi9YUZM4Xr3KJ44JCwvtqF4UYWzHzuBOgzfFt3w5lU_jWNiQ-yQ", rarra: false, topWins: false  },
+  { name: "MiriiCs", tag: "EUW", imageUrl: "/images/basic.jpg", puuid: "RmtGov9-QWUbVvbcfSyBwFTzQ_jvt6H2P1dEUzKvm1F13UrNlv1Esm51mc1xgwr6ZvXxhx_LavNBUg", rarra: false, topWins: false },
+  { name: "Blacknalla", tag: "EUW", imageUrl: "/images/basic.jpg", puuid: "4HCtWP1RXcww8W5CxNh5jZgaEaRbjQP3UN2iiXAtMEDDGGreKYnPJ1IdCqaI-xgyehc3Nz1_HEfYMw", rarra: false, topWins: false },
+  { name: "Reze", tag: "SLN", imageUrl: "/images/selene.jpg", puuid: "sf33K0twqOt0Qouf47AImIe5HJYrnWtIFbSlzNXci-_AUcHXpi7VG56n8ZwDTFuwopHnxNoeiBbpNw", rarra: false, topWins: false },
+  { name: "matajare21", tag: "9781", imageUrl: "/images/basic.jpg", puuid: "bcKpsrVrmuN86RVmurEdx68evBJUpmOv_vio0ErhK35sKmtPNny4d5qXcSknwzqcR2aXVI8iHEeykQ", rarra: false, topWins: false },
+  { name: "NONTRENO", tag: "973", imageUrl: "/images/carlitos.jpg", puuid: "_rbzhwH44Xurll5x1PPOau7i-lN2gSPHd8dv6ko1qCJ4FpCcjRCFqJSQ50WrJV6rIZbBGmd_xjWBgQ", rarra: false, topWins: false },
+  { name: "Ayiyiyiyi", tag: "Yiyi", imageUrl: "/images/basic.jpg", puuid: "C1Vv5nMdUqR6Mcv6hX-xhMx-8DUiYxS5IZFb1BYU_LUAvxFv1tkEITbttY0TK2UMRtQrmHrzs4Yd0g", rarra: false, topWins: false },
+  { name: "Sidus92", tag: "EUW", imageUrl: "/images/mithel.jpg", puuid: "Klde1A0aCs3KPRkTLzjX233R6PdX95X4isCztnCvh8aCuB4B_8zUrYpkjIlR5W3YHKHmL19uaTFGXA", rarra: false, topWins: false },
+  { name: "FoIIamosGordas", tag: "EUW", imageUrl: "/images/chicho.jpg", puuid: "FVEFa5zoHFNkPb4WrSkmxpCNjpR8nWK2_gDtAC3P1M07UWVG-RVZitBAZus3K7j6oZAKtydIC5daIQ", rarra: false, topWins: false },
+  { name: "Hypnopompic Man", tag: "EUW", imageUrl: "/images/chami.jpg", puuid: "7xyxwmOByEONH_MX6X44XYeeYQiFHwurVQ9qpegYSBmPc5WlFg3lttvn1LYhnQE3XWO178hDN9PTPg", rarra: false, topWins: false },
+  { name: "Harvey El Pestes", tag: "SPE", imageUrl: "/images/extintor.jpg", puuid: "MgASkBw9vKQngRalplmMKDt9CzBCClclt4ZjgqNyUT-Me9Uz4CMmaIuYXd3I6cjDW74VMt5Pu0NAaA", rarra: false, topWins: false },
+  { name: "xBurgo", tag: "BURGO", imageUrl: "/images/biengo.jpg", puuid: "o5vLHUTwCdmsLw_q7LRVWJBLCfHJ-GLkUEKAJF5GsnZqroETgIsBM_4VIG62EXlzSBJlMAX5sFDeCA", rarra: false, topWins: false },
+  { name: "Gol D Loren", tag: "2330", imageUrl: "/images/loren.jpg", puuid: "J6NMoT6gvwWTVH37jOdwJzv443zUN3W6KFt5tyPTVj8ox0VCkhdcDt8YHUGFYYRsmA7lLYHxHUkyNw", rarra: false, topWins: false },
+  { name: "danielgv1498", tag: "Poppy", imageUrl: "/images/dani.jpg", puuid: "VgpyuisX0CiU5uCDcze2NxYqVqzvw8nsOsE2hGtG1jouhXlae_-ySD7Xtu2Rr14yZoevV2tgaIXIZw", rarra: false, topWins: false },
+  { name: "BurgoLover", tag: "3642", imageUrl: "/images/huevito.jpg", puuid: "vM-GtEnkYgUbwk4mfVy0gHhLp7EEFye0Us1eZW8Zj_564rvW8il43qnjb3uuAoDB8RYb9QkufaEC3w", rarra: false, topWins: false },
+  { name: "SoloQoala", tag: "Uzhas", imageUrl: "/images/alferez.jpg", puuid: "EV1UX_ZfLAYAfZZDs_ztFIazp31fKBmnsaIPx3bv-F-sas3eNTu_WaJt7vsEjf7b11adX1gUnowYlA", rarra: false, topWins: false },
+  { name: "50 swags of bard", tag: "EUW", imageUrl: "/images/aleano.jpg", puuid: "b7mWGfjWNC6cd7CmzpCngvw_V-HVi9YUZM4Xr3KJ44JCwvtqF4UYWzHzuBOgzfFt3w5lU_jWNiQ-yQ", rarra: false, topWins: false },
 ];
 
 
@@ -86,78 +86,78 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   const loadData = async () => {
-  setLoading(true); // mostrar throbber
+    setLoading(true); // mostrar throbber
 
-  const results: Player[] = [];
+    const results: Player[] = [];
 
-  const idxRARRA = getRARRA();
+    const idxRARRA = getRARRA();
 
-  for (let i = 0; i < players.length; i++) {
-    const player = players[i];
-    const data = await fetchRank(player.puuid);
+    for (let i = 0; i < players.length; i++) {
+      const player = players[i];
+      const data = await fetchRank(player.puuid);
 
-    results.push({
-      ...player,
-      rank: `${data.tier} ${data.rank} - ${data.lp} LP`,
-      wins: data.wins,
-      losses: data.losses,
-      rarra: i === idxRARRA,
-      topWins: false,
-      rango:`${data.tier}`,
-      division: `${data.rank}`,
-      lps: `${data.lp}`,
-    });
+      results.push({
+        ...player,
+        rank: `${data.tier} ${data.rank} - ${data.lp} LP`,
+        wins: data.wins,
+        losses: data.losses,
+        rarra: i === idxRARRA,
+        topWins: false,
+        rango: `${data.tier}`,
+        division: `${data.rank}`,
+        lps: `${data.lp}`,
+      });
 
-    if ((i + 1) % 5 === 0 && i !== players.length - 1) {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      if ((i + 1) % 5 === 0 && i !== players.length - 1) {
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      }
     }
-  }
 
-  results.sort(compararRank);
+    results.sort(compararRank);
 
-  const mejorJugador = results[0];
-  if (mejorJugador) {
-    results.forEach((p) => {
-      p.topWins = p === mejorJugador;
-    });
-  }
-  const max = Math.max(...results.map(p => (p.wins ?? 0) + (p.losses ?? 0)));
-  setMaxPartidas(max);
+    const mejorJugador = results[0];
+    if (mejorJugador) {
+      results.forEach((p) => {
+        p.topWins = p === mejorJugador;
+      });
+    }
+    const max = Math.max(...results.map(p => (p.wins ?? 0) + (p.losses ?? 0)));
+    setMaxPartidas(max);
 
-  const now = Date.now();
-  localStorage.setItem("lastUpdate", now.toString());
-  setLastUpdate(now);
-  setPlayerData(results);
-  setLoading(false); // ocultar throbber
-  console.log("Jugador con RARRA:", results.find(p => p.rarra));
-};
+    const now = Date.now();
+    localStorage.setItem("lastUpdate", now.toString());
+    setLastUpdate(now);
+    setPlayerData(results);
+    setLoading(false); // ocultar throbber
+    console.log("Jugador con RARRA:", results.find(p => p.rarra));
+  };
 
 
   const getTimeSince = (timestamp: number) => {
-      const diff = Date.now() - timestamp;
-      const minutes = Math.floor(diff / 60000);
-      const seconds = Math.floor((diff % 60000) / 1000);
-      if (diff < 0) return "Desconocido";
-      if (minutes === 0 && seconds === 0) return "Justo ahora";
-      if (minutes === 0) return `${seconds} seg.`;
-      return `${minutes} min ${seconds} seg.`;
-    };
+    const diff = Date.now() - timestamp;
+    const minutes = Math.floor(diff / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+    if (diff < 0) return "Desconocido";
+    if (minutes === 0 && seconds === 0) return "Justo ahora";
+    if (minutes === 0) return `${seconds} seg.`;
+    return `${minutes} min ${seconds} seg.`;
+  };
 
-function getRARRA(): number {
-  const startDate = Date.UTC(2025, 0, 1); // 0 = enero
+  function getRARRA(): number {
+    const startDate = Date.UTC(2025, 0, 1); // 0 = enero
 
-  const now = new Date();
-  const utcPlus2 = new Date(now.getTime() + 2 * 60 * 60 * 1000); // Añade 2 horas (UTC+2)
+    const now = new Date();
+    const utcPlus2 = new Date(now.getTime() + 2 * 60 * 60 * 1000); // Añade 2 horas (UTC+2)
 
-  const today = Date.UTC(
-    utcPlus2.getUTCFullYear(),
-    utcPlus2.getUTCMonth(),
-    utcPlus2.getUTCDate()
-  );
+    const today = Date.UTC(
+      utcPlus2.getUTCFullYear(),
+      utcPlus2.getUTCMonth(),
+      utcPlus2.getUTCDate()
+    );
 
-  const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-  return diffDays % 17;
-}
+    const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    return diffDays % 17;
+  }
 
 
 
@@ -227,13 +227,13 @@ function getRARRA(): number {
       });
     } else if (sortBy === "actividad") {
       sorted.sort((a, b) => {
-      const emojiA = getActividadLevel(a.wins, a.losses, maxPartidas);
-      const emojiB = getActividadLevel(b.wins, b.losses, maxPartidas);
-      const indexA = emojiOrder.indexOf(emojiA);
-      const indexB = emojiOrder.indexOf(emojiB);
-      return sortDir === "asc" ? indexA - indexB : indexB - indexA;
-    });
-  }
+        const emojiA = getActividadLevel(a.wins, a.losses, maxPartidas);
+        const emojiB = getActividadLevel(b.wins, b.losses, maxPartidas);
+        const indexA = emojiOrder.indexOf(emojiA);
+        const indexB = emojiOrder.indexOf(emojiB);
+        return sortDir === "asc" ? indexA - indexB : indexB - indexA;
+      });
+    }
 
 
 
@@ -287,7 +287,7 @@ function getRARRA(): number {
   //       </span>)
   //       }
   //     }
-  
+
   const getActividadEmoji = (wins?: number, losses?: number) => {
     const total = (wins ?? 0) + (losses ?? 0);
 
@@ -355,14 +355,14 @@ function getRARRA(): number {
   // const formatDateTime = (timestamp: number) => {
   //   const d = new Date(timestamp);
   //   const day = d.getDate();
-    
+
   //   // Nombres de meses en español
   //   const months = [
   //     "enero", "febrero", "marzo", "abril", "mayo", "junio",
   //     "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
   //   ];
   //   const monthName = months[d.getMonth()];
-    
+
   //   const year = d.getFullYear();
   //   const hours = d.getHours().toString().padStart(2, "0");
   //   const minutes = d.getMinutes().toString().padStart(2, "0");
@@ -372,180 +372,198 @@ function getRARRA(): number {
 
 
   return (
-    <main className={styles.main} style={{ margin: 0 }}>  
+    <main className={styles.main} style={{ margin: 0 }}>
 
 
       <body style={{ margin: 0 }}>
-      <h1 className={styles.title}>SOLOQ CHALLENGE</h1>
+        <h1 className={styles.title}>SOLOQ CHALLENGE</h1>
         {loading && (
-      <div className={styles.loaderContainer}>
-        <div className={styles.loader}></div>
-        <p className={styles.cargandoDatos}>Cargando datos...</p>
-        <div className={styles.cargandoDatosPetit}>El tiempo de espera es necesario para evitar la sobrecarga de la API sorry 😜</div>
-
-      </div>
-      )}
-      <div className={styles.controls}>
-       <button
-        className={`${!canRefresh ? styles.refreshButtonMal : styles.refreshButton}`}
-        onClick={loadData}
-        disabled={!canRefresh}>
-          Refrescar
-        </button>
-        <p className={styles.lastUpdate}>Última actualización hace: {timeSince}</p>
-      </div>
-
-      <div className={styles.tableContainer}>
-        <table className={styles.table}>
-          <thead>
-          <tr className={styles.row}>
-              <th onClick={() => handleSort("pos")}>
-                #
-                {sortBy === "pos" && (sortDir === "asc" ? " ▲" : " ▼")}
-              </th>
-              <th onClick={() => handleSort("name")}>
-                Jugador
-                {sortBy === "name" && (sortDir === "asc" ? " ▲" : " ▼")}
-              </th>
-              <th onClick={() => handleSort("rank")}>
-                Rango
-                {sortBy === "rank" && (sortDir === "asc" ? " ▲" : " ▼")}
-              </th>
-              <th onClick={() => handleSort("partidas")}>
-                Partidas
-                {sortBy === "partidas" && (sortDir === "asc" ? " ▲" : " ▼")}
-              </th>
-                <th onClick={() => handleSort("wr")}>
-                    Win Rate
-                {sortBy === "wr" && (sortDir === "asc" ? " ▲" : " ▼")}
-              </th>
-              <th onClick={() => handleSort("actividad")}>
-                Actividad
-                {sortBy === "actividad" && (sortDir === "asc" ? " ▲" : " ▼")}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-  {getSortedData().map((player, idx) => {
-    const totalGames = player.wins + player.losses;
-    const isLoser = player.losses > player.wins;
-    const hasRarra=player.rarra;
-    const isMejor=player.topWins;
-    const estiloRarra = (() => {
-      if(isMejor){
-        return {
-          background: '#ffcd00',
-          border: '5px solid #d3a900',
-        };
-      }
-      if (hasRarra && isLoser) {
-        return {
-          background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
-          border: '10px solid purple',
-        };
-      }
-      if (isLoser) {
-        return {
-          background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
-        };
-      }
-      if (hasRarra) {
-        return {
-          backgroundColor: 'purple',
-        };
-      }
-      
-      return undefined;
-    })();
-    const estiloEnfermo = (() => {
-    if (player.wins + player.losses > 99) {
-        return {
-            background: 'linear-gradient(-45deg, #ff0000, #ff9900, #ffff00, #ff0000)',
-            backgroundSize: '600% 600%',
-            animation: 'fuego 0.5s infinite ease-in-out',
-        };
-    }
-    return undefined;
-    })();
-    return (
-      <tr
-        key={idx}
-        title={`Partidas totales: ${totalGames}`}
-        style={estiloRarra}
-        className={styles.row}
-      >
-        <td>{idx + 1}</td>
-        <td
-          onClick={() => abrirOpGG(player.name + "-" + player.tag)}
-          className={styles.playerCell}
-          style={{ cursor: 'pointer' }}
-        >
-          <div style={{ position: 'relative', display: 'inline-block', marginRight: 8 }}>
-            <Image
-              src={player.imageUrl}
-              alt={player.name}
-              width={40}
-              height={40}
-              className={styles.avatar}
-            />
-            {(isLoser || player.rarra || isMejor) && (
-                <span
-                  style={{
-                    position: 'absolute',
-                    top: -5,
-                    right: 5,
-                    fontSize: '1.2rem',
-                    borderRadius: '30%',
-                    padding: '0 4px',
-                  }}
-                >
-                  {isMejor && '👑'}
-                  {isLoser && '🤡'}
-                  {player.rarra && '🦠'}
-                </span>
-              )}
+          <div className={styles.loaderContainer}>
+            <div className={styles.loader}></div>
+            <p className={styles.cargandoDatos}>Cargando datos...</p>
+            <div className={styles.cargandoDatosPetit}>El tiempo de espera es necesario para evitar la sobrecarga de la API sorry 😜</div>
 
           </div>
-          {player.name}
-        </td>
-          <td className={styles.cell}>
-            {player.rank?.toUpperCase() === "UNRANKED" ? (
-              "UNRANKED"
-            ) : (
-              <div className={styles.rankCellContent}>
-                <Image
-                  src={`/images/${player.rango?.toUpperCase() || "DEFAULT"}.png`}
-                  alt={player.rank}
-                  className={styles.rankImage}
-                />
-                <div className={styles.rankText}>
-                  <span>{player.division}</span>
-                  <span>{player.lps} LP</span>
-                </div>
-              </div>
-            )}
-          </td>
-        <td
-            style={estiloEnfermo}>
-            {player.rank?.toUpperCase().includes("UNRANKED")
-            ? "-"
-            : `V: ${player.wins} D: ${player.losses}`}
-        </td>
-        <td>
-          {player.rank?.toUpperCase().includes("UNRANKED")
-            ? "-"
-            : ((player.wins ?? 0) / ((player.wins ?? 0) + (player.losses ?? 0)) * 100).toFixed(1) + "%"}
-        </td>
-        <td>
-          {getActividadEmoji(player.wins, player.losses)}
-        </td>
-      </tr>
-    );
-  })}
-</tbody>
+        )}
+        <div className={styles.controls}>
+          <button
+            className={`${!canRefresh ? styles.refreshButtonMal : styles.refreshButton}`}
+            onClick={loadData}
+            disabled={!canRefresh}>
+            Refrescar
+          </button>
+          <p className={styles.lastUpdate}>Última actualización hace: {timeSince}</p>
+        </div>
 
-        </table>
-      </div>
+        <div className={styles.tableContainer}>
+          <table className={styles.table}>
+            <thead>
+              <tr className={styles.row}>
+                <th onClick={() => handleSort("pos")}>
+                  #
+                  {sortBy === "pos" && (sortDir === "asc" ? " ▲" : " ▼")}
+                </th>
+                <th onClick={() => handleSort("name")}>
+                  Jugador
+                  {sortBy === "name" && (sortDir === "asc" ? " ▲" : " ▼")}
+                </th>
+                <th onClick={() => handleSort("rank")}>
+                  Rango
+                  {sortBy === "rank" && (sortDir === "asc" ? " ▲" : " ▼")}
+                </th>
+                <th onClick={() => handleSort("partidas")}>
+                  Partidas
+                  {sortBy === "partidas" && (sortDir === "asc" ? " ▲" : " ▼")}
+                </th>
+                <th onClick={() => handleSort("wr")}>
+                  Win Rate
+                  {sortBy === "wr" && (sortDir === "asc" ? " ▲" : " ▼")}
+                </th>
+                <th onClick={() => handleSort("actividad")}>
+                  Actividad
+                  {sortBy === "actividad" && (sortDir === "asc" ? " ▲" : " ▼")}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {getSortedData().map((player, idx) => {
+                const totalGames = player.wins + player.losses;
+                const isLoser = player.losses > player.wins;
+                const hasRarra = player.rarra;
+                const isMejor = player.topWins;
+                const estiloRarra = (() => {
+                  if (isMejor) {
+                    return {
+                      background: '#ffcd00',
+                      border: '5px solid #d3a900',
+                    };
+                  }
+                  if (hasRarra && isLoser) {
+                    return {
+                      background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
+                      border: '10px solid purple',
+                    };
+                  }
+                  if (isLoser) {
+                    return {
+                      background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
+                    };
+                  }
+                  if (hasRarra) {
+                    return {
+                      backgroundColor: 'purple',
+                    };
+                  }
+
+                  return undefined;
+                })();
+                const estiloEnfermo = (() => {
+                  if (player.wins + player.losses > 99) {
+                    return {
+                      backgroundImage: 'url("images/fire.png")',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      color: 'white',
+                      fontWeight: 'bold',
+                      textShadow: `
+                        -1px -1px 0 black,
+                        1px -1px 0 black,
+                        -1px  1px 0 black,
+                        1px  1px 0 black
+                      `
+                    };
+                  }
+
+                  return undefined;
+                })();
+                return (
+                  <tr
+                    key={idx}
+                    title={`Partidas totales: ${totalGames}`}
+                    style={estiloRarra}
+                    className={styles.row}
+                  >
+                    <td>{idx + 1}</td>
+                    <td
+                      onClick={() => abrirOpGG(player.name + "-" + player.tag)}
+                      className={styles.playerCell}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <div style={{ position: 'relative', marginRight: 8 }}>
+                          <Image
+                            src={player.imageUrl}
+                            alt={player.name}
+                            width={40}
+                            height={40}
+                            className={styles.avatar}
+                          />
+                          {(isLoser || player.rarra || isMejor) && (
+                            <span
+                              style={{
+                                position: 'absolute',
+                                top: -5,
+                                right: 5,
+                                fontSize: '1.2rem',
+                                borderRadius: '30%',
+                                padding: '0 4px',
+                              }}
+                            >
+                              {isMejor && '👑'}
+                              {isLoser && '🤡'}
+                              {player.rarra && '🦠'}
+                            </span>
+                          )}
+                        </div>
+                        <div style={{ fontWeight: 'bold', flex: 1, textAlign: 'left' }}>
+                          {player.name}
+                        </div>
+                      </div>
+                    </td>
+
+                    <td className={styles.cell}>
+                      {player.rank?.toUpperCase() === "UNRANKED" ? (
+                        "UNRANKED"
+                      ) : (
+                        <div className={styles.rankCellContent}>
+                          <Image
+                            src={`/images/${player.rango?.toUpperCase() || "DEFAULT"}.png`}
+                            alt={player.rank}
+                            className={styles.rankImage}
+                          />
+                          <div className={styles.rankText}>
+                            <span>{player.division}</span>
+                            <span>{player.lps} LP</span>
+                          </div>
+                        </div>
+                      )}
+                    </td>
+                    <td
+                      style={estiloEnfermo}>
+                      {player.rank?.toUpperCase().includes("UNRANKED")
+                        ? "-"
+                        : <div style={{ textAlign: 'center' }}>{`V: ${player.wins} D: ${player.losses}`}</div>}
+                    </td>
+                    <td>
+                      {player.rank?.toUpperCase().includes("UNRANKED")
+                        ? "-"
+                        : <div style={{ textAlign: 'center' }}>{((player.wins ?? 0) / ((player.wins ?? 0) + (player.losses ?? 0)) * 100).toFixed(1) + "%"}</div>}
+                    </td>
+                    <td>
+                      {getActividadEmoji(player.wins, player.losses)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+
+          </table>
+        </div>
       </body>
     </main>
   );
