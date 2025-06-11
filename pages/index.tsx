@@ -458,6 +458,36 @@ export default function Home() {
                   return undefined;
                 })();
                 const estiloEnfermo = (() => {
+                  if (player.wins + player.losses > 299) {
+                    return {
+                      backgroundImage: 'url("images/veneno.png")',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      color: 'black',
+                      fontWeight: 'bold',
+                      textShadow: `
+                        -1px -1px 0 white,
+                        1px -1px 0 white,
+                        -1px  1px 0 white,
+                        1px  1px 0 white
+                      `
+                    };
+                  }
+                  if (player.wins + player.losses > 199) {
+                    return {
+                      backgroundImage: 'url("images/purplefire.png")',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      color: 'black',
+                      fontWeight: 'bold',
+                      textShadow: `
+                        -1px -1px 0 white,
+                        1px -1px 0 white,
+                        -1px  1px 0 white,
+                        1px  1px 0 white
+                      `
+                    };
+                  }
                   if (player.wins + player.losses > 99) {
                     return {
                       backgroundImage: 'url("images/fire.png")',
@@ -473,7 +503,6 @@ export default function Home() {
                       `
                     };
                   }
-
                   return undefined;
                 })();
                 return (
