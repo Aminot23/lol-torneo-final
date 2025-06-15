@@ -460,7 +460,7 @@ export default function Home() {
                 const estiloEnfermo = (() => {
                   if (player.wins + player.losses > 299) {
                     return {
-                      backgroundImage: 'url("images/veneno.png")',
+                      backgroundImage: 'url("images/bluefire.png")',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       color: 'black',
