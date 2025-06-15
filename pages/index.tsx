@@ -451,7 +451,7 @@ export default function Home() {
                   }
                   if (hasRarra) {
                     return {
-                      backgroundColor: 'purple',
+                      backgroundColor: '#ab4b8d',
                     };
                   }
 
